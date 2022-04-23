@@ -19,7 +19,7 @@ This tutorial assumes that you have Azure, Git and Github basic knowledge.
 - Run az cli:\
   `az staticwebapp create -n {app name} -s https://github.com/{repo path} -b {branch name} -l {location} -g {resource group name} -t {personal token} --Sku Standard`
 
-- Update .github/workflows/{app url}.yml file set properties as following:
+- Update .github/workflows/{app url}.yml file. Set properties as following:
   - `app_location: "/"`
   - `api_location: ""`
   - `output_location: "build"`
