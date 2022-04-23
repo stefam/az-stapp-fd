@@ -1,4 +1,4 @@
-# Azure Static Web App + Azure Classic Frontdoor + ARM + Azure CLI.
+# Azure Static Web App + Azure Classic Frontdoor + Azure CLI.
 This tutorial is meant to help you to create an Azure based application behind a gobally availabel load balancer solution.
 This tutorial assumes that you have Azure, Git and Github basic knowledge.
 
@@ -11,31 +11,16 @@ This tutorial assumes that you have Azure, Git and Github basic knowledge.
 ### 3. Push code to github repository.
 
 ### 4. Create azure resource group.
-`az group create --location eastus2 --name {resource group name}`
+`az group create --location {location} --name {resource group name}`
 
 ### 5. Create azure static web app from ARM template.
-- Go to folder .az/templates/stapp-create/ \
-  `cd .az/templates/stapp-create`
-
-- Open `parameters.json` file and populate repositoryToken.value property with your [repository token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+- Get a personal access token [repository token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 - Run az cli:\
-  `az deployment group create \
-  --name {static web app deployment group name} \
-  --resource-group {resource group name} \
-  --template-file 'template.json' \
-  --parameters '@parameters.json'`
+  `az staticwebapp create -n {app name} -s https://github.com/{repo path} -b {branch name} -l {location} -g {resource group name} -t {personal token}`
 
 ### 6. Create azure classic front door.
-- Go to folder .az/templates/fd-create/ \
-  `cd .az/templates/fd-create`
-
-- Run az cli:\
-  `az deployment group create \
-  --name {front door deployment group name} \
-  --resource-group {resource group name} \
-  --template-file 'template.json' \
-  --parameters '@parameters.json'`
+`az network front-door create --name {front dor resource name} --resource-group {resource group name} --accepted-protocols Http Https --backend-address {static web app host url}`
 
 ### 7. Create staticwebapp.config.json file on repository root folder.
 - Add static web app config networking node:\
