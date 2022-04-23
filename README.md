@@ -3,17 +3,17 @@ This tutorial is meant to help you to create an Azure based application behind a
 This tutorial assumes that you have Azure, Git and Github basic knowledge.
 
 ## Steps
-### 1. Create github repository.
+### 1. Create github repository
 
-### 2. Create the app.
+### 2. Create the app
 `npx create-react-app {app name} --template typescript`
 
-### 3. Push code to github repository.
+### 3. Push code to github repository
 
-### 4. Create azure resource group.
+### 4. Create azure resource group
 `az group create --location {location} --name {resource group name}`
 
-### 5. Create azure static web app from ARM template.
+### 5. Create azure static web app
 - Get a personal access token [repository token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 - Run az cli:\
@@ -24,10 +24,10 @@ This tutorial assumes that you have Azure, Git and Github basic knowledge.
   - `api_location: ""`
   - `output_location: "build"`
 
-### 6. Create azure classic front door.
+### 6. Create azure classic front door
 `az network front-door create --name {front dor resource name} --resource-group {resource group name} --accepted-protocols Http Https --backend-address {static web app host FQDN}`
 
-### 7. Create staticwebapp.config.json file on repository root folder.
+### 7. Create staticwebapp.config.json file on repository root folder
 - Add static web app config networking node:\
   `"networking": { "allowedIpRanges": ["AzureFrontDoor.Backend"] }`
 
