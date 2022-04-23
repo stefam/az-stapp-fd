@@ -6,6 +6,6 @@
     "requiredHeaders": {
       "X-Azure-FDID": "d6b19aff-a8ce-4d2f-9846-71a54cc97ffd"
     },
-    "allowedForwardedHosts": ["fd-expert-prod-001.azurefd.net"]
+    "allowedForwardedHosts": ["fd-demo-prod-001.azurefd.net"]
   }
 }
