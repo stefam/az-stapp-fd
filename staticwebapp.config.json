@@ -4,7 +4,7 @@
   },
   "forwardingGateway": {
     "requiredHeaders": {
-      "X-Azure-FDID": "d6b19aff-a8ce-4d2f-9846-71a54cc97ffd"
+      "X-Azure-FDID": "8833fd05-b47c-4659-b280-61951f8c5b2e"
     },
     "allowedForwardedHosts": ["fd-demo-prod-001.azurefd.net"]
   }
