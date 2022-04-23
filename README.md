@@ -36,7 +36,7 @@ This tutorial assumes that you have Azure, Git and Github basic knowledge.
     "requiredHeaders": {
       "X-Azure-FDID": "{Front Door ID}"
     },
-    "allowedForwardedHosts": ["{Front host domain}"]
+    "allowedForwardedHosts": ["{Front Door host domain}"]
   }`
 
 ## Ref links:
