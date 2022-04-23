@@ -4,13 +4,16 @@ This tutorial assumes that you have Azure, Git and Github basic knowledge.
 
 ## Steps
 1. Create github repository.
-3. Create react app using (for this tutorial we used npx `create-react-app {app name} --template typescript`).
-4. Push code to github repository.
-5. Create azure resource group.
-6. Create azure static web app.
-7. Create azure classic front door.
-8. Create staticwebapp.config.json file on repository root folder.
-9. Add static web app config networking node:
+2. Create react app using (for this tutorial we used npx `create-react-app {app name} --template typescript`).
+3. Push code to github repository.
+4. Create azure resource group.\
+  4.1. Use template found on /.az/templates/rg-create/
+5. Create azure static web app.\
+  5.1. Use template found on  /.az/templates/stapp-create/
+6. Create azure classic front door.\
+  6.1 Use template found on /.az/templates/fd-create/
+7. Create staticwebapp.config.json file on repository root folder.
+8. Add static web app config networking node:
 \
    `"networking": { "allowedIpRanges": ["AzureFrontDoor.Backend"] }`
 
