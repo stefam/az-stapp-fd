@@ -17,13 +17,13 @@ This tutorial assumes that you have Azure, Git and Github basic knowledge.
 - Go to folder .az/templates/stapp-create/ \
   `cd .az/templates/stapp-create`
 
-- Open `parameters.json` file and populate repositoryToken.value property with your repository token.
+- Open `parameters.json` file and populate repositoryToken.value property with your [repository token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 - Run az cli:\
-  `az deployment group create
-  --name {static web app deployment group name}
-  --resource-group {resource group name}
-  --template-file 'template.json'
+  `az deployment group create \
+  --name {static web app deployment group name} \
+  --resource-group {resource group name} \
+  --template-file 'template.json' \
   --parameters '@parameters.json'`
 
 ### 6. Create azure classic front door.
@@ -31,10 +31,10 @@ This tutorial assumes that you have Azure, Git and Github basic knowledge.
   `cd .az/templates/fd-create`
 
 - Run az cli:\
-  `az deployment group create
-  --name {front door deployment group name}
-  --resource-group {resource group name}
-  --template-file 'template.json'
+  `az deployment group create \
+  --name {front door deployment group name} \
+  --resource-group {resource group name} \
+  --template-file 'template.json' \
   --parameters '@parameters.json'`
 
 ### 7. Create staticwebapp.config.json file on repository root folder.
