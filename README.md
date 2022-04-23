@@ -25,7 +25,7 @@ This tutorial assumes that you have Azure, Git and Github basic knowledge.
   - `output_location: "build"`
 
 ### 6. Create azure classic front door.
-`az network front-door create --name {front dor resource name} --resource-group {resource group name} --accepted-protocols Http Https --backend-address {static web app host url}`
+`az network front-door create --name {front dor resource name} --resource-group {resource group name} --accepted-protocols Http Https --backend-address {static web app host FQDN}`
 
 ### 7. Create staticwebapp.config.json file on repository root folder.
 - Add static web app config networking node:\
