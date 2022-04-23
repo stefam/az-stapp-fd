@@ -44,4 +44,4 @@ This tutorial assumes that you have Azure, Git and Github basic knowledge.
 - [Azure resources naming convention.](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming)
 - [Azure resources abbreviations.](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations)
 - [Azure Frontdoor CLI specs.](https://docs.microsoft.com/en-us/cli/azure/network/front-door?view=azure-cli-latest)
-- [Azure Saatic Web App CLI specs.](https://docs.microsoft.com/en-us/cli/azure/staticwebapp?view=azure-cli-latest)
+- [Azure Static Web App CLI specs.](https://docs.microsoft.com/en-us/cli/azure/staticwebapp?view=azure-cli-latest)
