@@ -17,7 +17,7 @@ This tutorial assumes that you have Azure, Git and Github basic knowledge.
 - Get a personal access token [repository token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 - Run az cli:\
-  `az staticwebapp create -n {app name} -s https://github.com/{repo path} -b {branch name} -l {location} -g {resource group name} -t {personal token} --Sku Standard`
+  `az staticwebapp create -n {app name} -s https://github.com/{repo path} -b {branch name} -l {location} -g {resource group name} -t {personal token} --sku Standard`
 
 - Update .github/workflows/{app url}.yml file. Set properties as following:
   - `app_location: "/"`
