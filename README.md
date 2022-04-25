@@ -1,5 +1,5 @@
 # Azure Static Web App + Azure Classic Frontdoor + Azure CLI.
-This tutorial is meant to help you to create an Azure based application behind a gobally availabel load balancer solution.
+This tutorial is meant to help you to create an Azure based application behind a gobally available load balancer solution.
 This tutorial assumes that you have Azure, Git and Github basic knowledge.
 
 ## Steps
