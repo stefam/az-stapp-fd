@@ -1,6 +1,6 @@
 # Azure Static Web App + Azure Classic Frontdoor + Azure CLI.
 This tutorial is meant to help you to create an Azure based application behind a gobally available load balancer solution.
-This tutorial assumes that you have Azure, Git and Github basic knowledge.
+This tutorial assumes that you have NPM, Azure, Git and Github basic knowledge.
 
 ## Steps
 ### 1. Create github repository
