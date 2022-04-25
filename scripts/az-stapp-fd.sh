@@ -14,6 +14,9 @@ personalToken={GITHUB PERSONAL ACCESS TOKEN}
 # Frontdoor variables
 frontDoorName=fd-demo-prod-001
 
+# Create resource group
+az group create --location $resourcesLocation --name $resourceGroupName
+
 # Create static web app
 az staticwebapp create \
 	-n $appName \
