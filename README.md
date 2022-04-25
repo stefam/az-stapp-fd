@@ -11,13 +11,13 @@ This tutorial assumes that you have Azure, Git and Github basic knowledge.
 ### 3. Push code to github repository
 
 ### 4. Create azure resource group
-`az group create --location {location} --name {resource group name}`
+`az group create --location {location} --name {resource group}`
 
 ### 5. Create azure static web app
 - Get a personal access token [repository token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 - Run az cli:\
-  `az staticwebapp create -n {app name} -s https://github.com/{repo path} -b {branch name} -l {location} -g {resource group name} -t {personal token} --sku Standard`
+  `az staticwebapp create -n {app name} -s https://github.com/{repo path} -b {branch} -l {location} -g {resource group} -t {personal token} --sku Standard`
 
 - Update .github/workflows/{app url}.yml file. Set properties as following:
   - `app_location: "/"`
@@ -25,7 +25,7 @@ This tutorial assumes that you have Azure, Git and Github basic knowledge.
   - `output_location: "build"`
 
 ### 6. Create azure classic front door
-`az network front-door create --name {front dor resource name} --resource-group {resource group name} --accepted-protocols Http Https --backend-address {static web app FQDN}`
+`az network front-door create --name {front door name} --resource-group {resource group} --accepted-protocols Http Https --backend-address {app FQDN}`
 
 ### 7. Create staticwebapp.config.json file on repository root folder
 - Add static web app config networking node:\
@@ -38,6 +38,11 @@ This tutorial assumes that you have Azure, Git and Github basic knowledge.
     },
     "allowedForwardedHosts": ["{Front Door host domain}"]
   }`
+
+- You can run the following command to get Front Door ID:
+  `az network front-door show -n {front door name} -g {resource group} --query "frontdoorId"`
+
+## Click [here](https://github.com/stefam/az-stapp-fd/blob/main/scripts/az-stapp-fd.sh) to see the full script.
 
 ## Ref links:
 - [Reference tutorial.](https://docs.microsoft.com/en-us/azure/static-web-apps/front-door-manual)
