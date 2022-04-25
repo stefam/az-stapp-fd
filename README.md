@@ -42,7 +42,7 @@ This tutorial assumes that you have Azure, Git and Github basic knowledge.
 - You can run the following command to get Front Door ID:
   `az network front-door show -n {front door name} -g {resource group} --query "frontdoorId"`
 
-## Click [here](https://github.com/stefam/az-stapp-fd/blob/main/scripts/az-stapp-fd.sh) to see the full script.
+### Click [here](https://github.com/stefam/az-stapp-fd/blob/main/scripts/az-stapp-fd.sh) to see the full script.
 
 ## Ref links:
 - [Reference tutorial.](https://docs.microsoft.com/en-us/azure/static-web-apps/front-door-manual)
