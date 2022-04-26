@@ -44,6 +44,9 @@ This tutorial assumes that you have NPM, Azure, Git and Github basic knowledge.
 
 ### Click [here](https://github.com/stefam/az-stapp-fd/blob/main/scripts/az-stapp-fd.sh) to see the full script.
 
+## Images
+<img src="https://github.com/stefam/az-stapp-fd/blob/main/diagram.png" alt="diagram" />
+
 ## Ref links:
 - [Reference tutorial.](https://docs.microsoft.com/en-us/azure/static-web-apps/front-door-manual)
 - [Azure resources naming convention.](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming)
