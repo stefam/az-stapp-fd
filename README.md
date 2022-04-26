@@ -45,7 +45,7 @@ This tutorial assumes that you have NPM, Azure, Git and Github basic knowledge.
 ### Click [here](https://github.com/stefam/az-stapp-fd/blob/main/scripts/az-stapp-fd.sh) to see the full script.
 
 ## Images
-<img src="https://github.com/stefam/az-stapp-fd/blob/main/diagram.png" alt="diagram" />
+<img src="https://github.com/stefam/az-stapp-fd/blob/main/diagram.png" alt="diagram" style="width: 400px;" />
 
 ## Ref links:
 - [Reference tutorial.](https://docs.microsoft.com/en-us/azure/static-web-apps/front-door-manual)
