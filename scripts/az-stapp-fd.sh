@@ -3,7 +3,7 @@ az login
 
 # Variables
 resourcesLocation=eastus2
-resourceGroupName=rg-demo-prod-eastus2-001
+resourceGroupName=rg-demo-prod--001
 
 # Static web app variables
 appName=stapp-demo-prod-eastus2-001
@@ -15,7 +15,9 @@ personalToken={GITHUB PERSONAL ACCESS TOKEN}
 frontDoorName=fd-demo-prod-001
 
 # Create resource group
-az group create --location $resourcesLocation --name $resourceGroupName
+az group create \
+	--name $resourceGroupName \
+	--location $resourcesLocation
 
 # Create static web app
 az staticwebapp create \
